@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Summer Hut Interior</title>
+  <script src="./aframe.min.js"></script>
+  <style>
+    body { margin: 0; }
+  </style>
+</head>
+<body>
+  <a-scene background="color: #87c8dd">
+    <a-entity position="0 2.35 4.8">
+      <a-camera rotation="-12 0 0" wasd-controls="acceleration: 40" look-controls="reverseMouseDrag: true"></a-camera>
+    </a-entity>
+
+    <a-light type="ambient" color="#ffffff" intensity="0.75"></a-light>
+    <a-light type="directional" color="#fff1c7" intensity="0.9" position="2 6 4"></a-light>
+
+    <!-- Summer hut interior -->
+    <a-plane position="0 -0.03 -3" rotation="-90 0 0" width="12" height="12" color="#c79a5b"></a-plane>
+
+    <!-- Wooden floor planks -->
+    <a-entity>
+      <a-box position="-5.35 0.015 -3" width="0.06" height="0.025" depth="12" color="#6f4828"></a-box>
+      <a-box position="-4.05 0.015 -3" width="0.06" height="0.025" depth="12" color="#7d5532"></a-box>
+      <a-box position="-2.70 0.015 -3" width="0.06" height="0.025" depth="12" color="#6f4828"></a-box>
+      <a-box position="-1.35 0.015 -3" width="0.06" height="0.025" depth="12" color="#7d5532"></a-box>
+      <a-box position="0 0.015 -3" width="0.06" height="0.025" depth="12" color="#6f4828"></a-box>
+      <a-box position="1.35 0.015 -3" width="0.06" height="0.025" depth="12" color="#7d5532"></a-box>
+      <a-box position="2.70 0.015 -3" width="0.06" height="0.025" depth="12" color="#6f4828"></a-box>
+      <a-box position="4.05 0.015 -3" width="0.06" height="0.025" depth="12" color="#7d5532"></a-box>
+      <a-box position="5.35 0.015 -3" width="0.06" height="0.025" depth="12" color="#6f4828"></a-box>
+    </a-entity>
+
+    <!-- Back and side timber walls -->
+    <a-plane position="0 3 -8.95" width="12" height="6" color="#d7ad69"></a-plane>
+    <a-plane position="-5.95 3 -3" rotation="0 90 0" width="11.9" height="6" color="#c9a15f"></a-plane>
+    <a-plane position="5.95 3 -3" rotation="0 -90 0" width="11.9" height="6" color="#c9a15f"></a-plane>
+
+    <!-- Wall panel seams and timber framing -->
+    <a-box position="-5.65 3 -8.91" width="0.16" height="6" depth="0.12" color="#5f3b22"></a-box>
+    <a-box position="-2.83 3 -8.91" width="0.12" height="6" depth="0.12" color="#744728"></a-box>
+    <a-box position="0 3 -8.91" width="0.16" height="6" depth="0.12" color="#5f3b22"></a-box>
+    <a-box position="2.83 3 -8.91" width="0.12" height="6" depth="0.12" color="#744728"></a-box>
+    <a-box position="5.65 3 -8.91" width="0.16" height="6" depth="0.12" color="#5f3b22"></a-box>
+    <a-box position="0 0.18 -8.88" width="12" height="0.32" depth="0.16" color="#4a3320"></a-box>
+    <a-box position="-5.90 3 -8.55" width="0.18" height="6" depth="0.18" color="#4a3320"></a-box>
+    <a-box position="5.90 3 -8.55" width="0.18" height="6" depth="0.18" color="#4a3320"></a-box>
+
+    <!-- Round thatched summer-hut roof -->
+    <a-cone position="0 6.30 -3"
+            radius-bottom="7.20" radius-top="0.25"
+            height="3.30" segments-radial="64"
+            open-ended="true" color="#b98a43"></a-cone>
+    <a-cylinder position="0 7.92 -3"
+               radius="0.38" height="0.28"
+               segments-radial="32" color="#d3b45f"></a-cylinder>
+
+    <!-- Circular thatch bands -->
+    <a-torus position="0 4.72 -3" rotation="90 0 0"
+             radius="6.65" radius-tubular="0.16"
+             segments-radial="16" segments-tubular="64" color="#d2b86b"></a-torus>
+    <a-torus position="0 5.18 -3" rotation="90 0 0"
+             radius="5.55" radius-tubular="0.14"
+             segments-radial="16" segments-tubular="64" color="#a77b38"></a-torus>
+    <a-torus position="0 5.65 -3" rotation="90 0 0"
+             radius="4.35" radius-tubular="0.13"
+             segments-radial="16" segments-tubular="64" color="#d2b86b"></a-torus>
+    <a-torus position="0 6.12 -3" rotation="90 0 0"
+             radius="3.12" radius-tubular="0.12"
+             segments-radial="16" segments-tubular="64" color="#a77b38"></a-torus>
+    <a-torus position="0 6.58 -3" rotation="90 0 0"
+             radius="1.95" radius-tubular="0.11"
+             segments-radial="16" segments-tubular="64" color="#d2b86b"></a-torus>
+
+    <!-- Roof support beams -->
+    <a-cylinder position="-5.65 3 -8.58" radius="0.12" height="6.2" color="#5a3a22"></a-cylinder>
+    <a-cylinder position="5.65 3 -8.58" radius="0.12" height="6.2" color="#5a3a22"></a-cylinder>
+    <a-box position="0 5.55 -8.62" width="12" height="0.22" depth="0.22" color="#5a3a22"></a-box>
+
+    <!-- Back window -->
+    <a-box position="-3.15 3.35 -8.78" width="2.25" height="1.85" depth="0.12" color="#79b5bb"></a-box>
+    <a-box position="-3.15 3.35 -8.68" width="2.48" height="0.12" depth="0.12" color="#4a3320"></a-box>
+    <a-box position="-3.15 3.35 -8.68" width="0.12" height="2.08" depth="0.12" color="#4a3320"></a-box>
+    <a-box position="-4.38 3.35 -8.68" width="0.12" height="2.08" depth="0.12" color="#4a3320"></a-box>
+    <a-box position="-1.92 3.35 -8.68" width="0.12" height="2.08" depth="0.12" color="#4a3320"></a-box>
+    <a-box position="-3.15 4.42 -8.68" width="2.48" height="0.12" depth="0.12" color="#4a3320"></a-box>
+    <a-box position="-3.15 2.28 -8.68" width="2.48" height="0.12" depth="0.12" color="#4a3320"></a-box>
+
+    <!-- Side window -->
+    <a-box position="5.78 3.35 -4.65" width="0.12" height="1.85" depth="2.25" rotation="0 0 0" color="#79b5bb"></a-box>
+    <a-box position="5.68 3.35 -4.65" width="0.12" height="0.12" depth="2.48" color="#4a3320"></a-box>
+    <a-box position="5.68 3.35 -4.65" width="0.12" height="2.08" depth="0.12" color="#4a3320"></a-box>
+    <a-box position="5.68 4.42 -4.65" width="0.12" height="0.12" depth="2.48" color="#4a3320"></a-box>
+    <a-box position="5.68 2.28 -4.65" width="0.12" height="0.12" depth="2.48" color="#4a3320"></a-box>
+
+    <!-- Tropical summer hut decorations -->
+    <a-entity position="-4.65 0 -7.8">
+      <a-cylinder position="0 1.05 0" radius="0.12" height="2.1" color="#5b3a22"></a-cylinder>
+      <a-cylinder position="0 2.15 0" radius="0.42" height="0.08" color="#b9a24d"></a-cylinder>
+      <a-cone position="0 2.55 0" radius-bottom="1.15" radius-top="0.18" height="1.45" color="#66a85a"></a-cone>
+      <a-cone position="0 2.95 0" radius-bottom="0.75" radius-top="0.08" height="1.05" color="#4f8d43"></a-cone>
+    </a-entity>
+
+    <a-entity position="4.95 0 -7.85">
+      <a-cylinder position="0 1.10 0" radius="0.12" height="2.20" color="#5b3a22"></a-cylinder>
+      <a-cylinder position="0 2.18 0" radius="0.42" height="0.08" color="#b9a24d"></a-cylinder>
+      <a-cone position="0 2.58 0" radius-bottom="1.10" radius-top="0.18" height="1.40" color="#66a85a"></a-cone>
+    </a-entity>
+
+    <!-- Rug -->
+    <a-cylinder position="0 0.01 -3" radius="2.5" height="0.025" color="#8d2f3d"></a-cylinder>
+    <a-cylinder position="0 0.025 -3" radius="2.15" height="0.025" color="#d5b55b"></a-cylinder>
+
+    <!-- Large table -->
+    <a-entity position="0 0 -3">
+      <a-cylinder position="0 1.10 0" radius="2.85" height="0.16" segments-radial="64" color="#9a6237"></a-cylinder>
+      <a-cylinder position="-2.15 0.55 -1.20" radius="0.09" height="1.10" segments-radial="16" color="#5e3b20"></a-cylinder>
+      <a-cylinder position="2.15 0.55 -1.20" radius="0.09" height="1.10" segments-radial="16" color="#5e3b20"></a-cylinder>
+      <a-cylinder position="-2.15 0.55 1.20" radius="0.09" height="1.10" segments-radial="16" color="#5e3b20"></a-cylinder>
+      <a-cylinder position="2.15 0.55 1.20" radius="0.09" height="1.10" segments-radial="16" color="#5e3b20"></a-cylinder>
+
+      <!-- Milo tin as a centerpiece -->
+      <a-entity position="0 1.41 -0.12" scale="0.65 0.65 0.65">
+        <a-cylinder radius="0.38" height="0.90" color="#277a28"></a-cylinder>
+        <a-cylinder position="0 0.405 0" radius="0.385" height="0.14" color="#f1f1e6"></a-cylinder>
+        <a-cylinder position="0 0.500 0" radius="0.39" height="0.045" color="#174d1a"></a-cylinder>
+        <a-text value="MILO" position="0 0.08 0.385" align="center" color="#f8ec7b" width="2.8"></a-text>
+        <a-text value="CHOCOLATE MALT" position="0 -0.17 0.385" align="center" color="#ffffff" width="1.7"></a-text>
+      </a-entity>
+
+      <!-- Milk tin as a second centerpiece -->
+      <a-entity position="-0.82 1.54 -0.12">
+        <a-cylinder radius="0.27" height="0.82" color="#f7f7f7"></a-cylinder>
+        <a-cylinder position="0 0.370 0" radius="0.275" height="0.15" color="#2874b9"></a-cylinder>
+        <a-cylinder position="0 0.465 0" radius="0.28" height="0.040" color="#b82f28"></a-cylinder>
+        <a-text value="MILK" position="0 0.05 0.278" align="center" color="#2056a6" width="1.8"></a-text>
+      </a-entity>
+
+      <!-- Place setting 1: cup, plate and cutlery -->
+      <a-entity position="1.15 1.34 0.58">
+        <!-- Realistic cup body -->
+        <a-cylinder position="0 -0.205 0" radius-bottom="0.195" radius-top="0.225" height="0.035" color="#b93838"></a-cylinder>
+        <a-cone position="0 0 0" radius-bottom="0.195" radius-top="0.225" height="0.410" color="#d84b4b" open-ended="true"></a-cone>
+        <a-cylinder position="0 -0.185 0" radius="0.198" height="0.045" color="#c33f3f"></a-cylinder>
+
+        <!-- Thick rim and coffee surface -->
+        <a-torus position="0 0.205 0" rotation="90 0 0" radius="0.225" radius-tubular="0.018" arc="360" color="#f08f8f"></a-torus>
+        <a-cylinder position="0 0.188 0" radius="0.205" height="0.018" color="#5e3b2c"></a-cylinder>
+        <a-torus position="0 0.198 0" rotation="90 0 0" radius="0.198" radius-tubular="0.008" arc="360" color="#8d6748"></a-torus>
+
+        <!-- Handle: a curved tube with solid mounts -->
+        <a-torus position="0.365 0.025 0" rotation="0 0 0" radius="0.145" radius-tubular="0.038" arc="360" color="#d84b4b"></a-torus>
+        <a-cylinder position="0.235 0.112 0" radius="0.043" height="0.16" rotation="0 0 90" color="#e66a6a"></a-cylinder>
+        <a-cylinder position="0.235 -0.062 0" radius="0.043" height="0.16" rotation="0 0 90" color="#e66a6a"></a-cylinder>
+        <a-sphere position="0.235 0.112 0" radius="0.046" color="#ed7b7b"></a-sphere>
+        <a-sphere position="0.235 -0.062 0" radius="0.046" color="#ed7b7b"></a-sphere>
+      </a-entity>
+
+      <!-- Place setting 2: cup, plate and cutlery -->
+      <a-entity position="-1.15 1.34 0.58">
+        <!-- Realistic cup body -->
+        <a-cylinder position="0 -0.205 0" radius-bottom="0.195" radius-top="0.225" height="0.035" color="#b93838"></a-cylinder>
+        <a-cone position="0 0 0" radius-bottom="0.195" radius-top="0.225" height="0.410" color="#d84b4b" open-ended="true"></a-cone>
+        <a-cylinder position="0 -0.185 0" radius="0.198" height="0.045" color="#c33f3f"></a-cylinder>
+
+        <!-- Thick rim and coffee surface -->
+        <a-torus position="0 0.205 0" rotation="90 0 0" radius="0.225" radius-tubular="0.018" arc="360" color="#f08f8f"></a-torus>
+        <a-cylinder position="0 0.188 0" radius="0.205" height="0.018" color="#5e3b2c"></a-cylinder>
+        <a-torus position="0 0.198 0" rotation="90 0 0" radius="0.198" radius-tubular="0.008" arc="360" color="#8d6748"></a-torus>
+
+        <!-- Handle on the outer side -->
+        <a-torus position="-0.365 0.025 0" rotation="0 0 0" radius="0.145" radius-tubular="0.038" arc="360" color="#d84b4b"></a-torus>
+        <a-cylinder position="-0.235 0.112 0" radius="0.043" height="0.16" rotation="0 0 90" color="#e66a6a"></a-cylinder>
+        <a-cylinder position="-0.235 -0.062 0" radius="0.043" height="0.16" rotation="0 0 90" color="#e66a6a"></a-cylinder>
+        <a-sphere position="-0.235 0.112 0" radius="0.046" color="#ed7b7b"></a-sphere>
+        <a-sphere position="-0.235 -0.062 0" radius="0.046" color="#ed7b7b"></a-sphere>
+      </a-entity>
+
+      <!-- Bottle of water -->
+      <a-entity position="1.85 1.18 0.58">
+        <a-cylinder position="0 0.23 0" radius="0.14" height="0.42" color="#a9d7df" opacity="0.55" transparent="true"></a-cylinder>
+        <a-cylinder position="0 0.16 0" radius="0.112" height="0.28" color="#55b5d2" opacity="0.82" transparent="true"></a-cylinder>
+        <a-cone position="0 0.49 0" radius-bottom="0.14" radius-top="0.07" height="0.12" color="#a9d7df" opacity="0.6" transparent="true"></a-cone>
+        <a-cylinder position="0 0.61 0" radius="0.07" height="0.12" color="#a9d7df" opacity="0.65" transparent="true"></a-cylinder>
+        <a-cylinder position="0 0.69 0" radius="0.078" height="0.045" color="#2874b9"></a-cylinder>
+      </a-entity>
+
+      <!-- Apples in a shared bowl area -->
+      <a-cylinder position="1.85 1.195 -0.48" radius="0.55" height="0.04" color="#f4f0df"></a-cylinder>
+      <a-cylinder position="1.85 1.218 -0.48" radius="0.43" height="0.012" color="#d9d3c1"></a-cylinder>
+      <a-entity position="1.85 1.24 -0.48">
+        <a-sphere position="-0.32 0.12 0" radius="0.16" color="#b52d2d"></a-sphere>
+        <a-sphere position="0.32 0.12 0" radius="0.16" color="#d43a32"></a-sphere>
+        <a-sphere position="0 0.20 0.18" radius="0.16" color="#8fbd3b"></a-sphere>
+        <a-cylinder position="-0.32 0.30 0" radius="0.018" height="0.12" rotation="0 0 -12" color="#5b4024"></a-cylinder>
+        <a-cylinder position="0.32 0.30 0" radius="0.018" height="0.12" rotation="0 0 12" color="#5b4024"></a-cylinder>
+        <a-cylinder position="0 0.38 0.18" radius="0.018" height="0.12" color="#5b4024"></a-cylinder>
+      </a-entity>
+
+      <!-- Plates and cutlery -->
+      <a-cylinder position="-1.15 1.19 0.58" radius="0.48" height="0.025" color="#f4f0df"></a-cylinder>
+      <a-cylinder position="-1.15 1.208 0.58" radius="0.34" height="0.012" color="#d9d3c1"></a-cylinder>
+      <a-box position="-1.75 1.20 0.58" width="0.035" height="0.025" depth="0.40" color="#aeb7bd"></a-box>
+      <a-box position="-1.88 1.20 0.58" width="0.035" height="0.025" depth="0.40" color="#aeb7bd"></a-box>
+      <a-box position="-0.55 1.20 0.58" width="0.035" height="0.025" depth="0.40" color="#aeb7bd"></a-box>
+
+      <a-cylinder position="1.15 1.19 0.58" radius="0.48" height="0.025" color="#f4f0df"></a-cylinder>
+      <a-cylinder position="1.15 1.208 0.58" radius="0.34" height="0.012" color="#d9d3c1"></a-cylinder>
+      <a-box position="0.55 1.20 0.58" width="0.035" height="0.025" depth="0.40" color="#aeb7bd"></a-box>
+      <a-box position="1.75 1.20 0.58" width="0.035" height="0.025" depth="0.40" color="#aeb7bd"></a-box>
+
+    </a-entity>
+
+    <!-- Chair 1 -->
+    <a-entity position="-3.15 0 -3" rotation="0 90 0">
+      <a-box position="0 0.82 0" width="0.82" height="0.12" depth="0.76" color="#b77b45"></a-box>
+      <a-box position="0 1.54 -0.33" width="0.82" height="1.28" depth="0.12" color="#986034"></a-box>
+      <a-box position="-0.34 0.40 -0.32" width="0.11" height="0.80" depth="0.11" color="#5e3b20"></a-box>
+      <a-box position="0.34 0.40 -0.32" width="0.11" height="0.80" depth="0.11" color="#5e3b20"></a-box>
+      <a-box position="-0.34 0.40 0.32" width="0.11" height="0.80" depth="0.11" color="#5e3b20"></a-box>
+      <a-box position="0.34 0.40 0.32" width="0.11" height="0.80" depth="0.11" color="#5e3b20"></a-box>
+    </a-entity>
+
+    <!-- Chair 2 -->
+    <a-entity position="3.15 0 -3" rotation="0 270 0">
+      <a-box position="0 0.82 0" width="0.82" height="0.12" depth="0.76" color="#b77b45"></a-box>
+      <a-box position="0 1.54 -0.33" width="0.82" height="1.28" depth="0.12" color="#986034"></a-box>
+      <a-box position="-0.34 0.40 -0.32" width="0.11" height="0.80" depth="0.11" color="#5e3b20"></a-box>
+      <a-box position="0.34 0.40 -0.32" width="0.11" height="0.80" depth="0.11" color="#5e3b20"></a-box>
+      <a-box position="-0.34 0.40 0.32" width="0.11" height="0.80" depth="0.11" color="#5e3b20"></a-box>
+      <a-box position="0.34 0.40 0.32" width="0.11" height="0.80" depth="0.11" color="#5e3b20"></a-box>
+    </a-entity>
+
+  </a-scene>
+</body>
+</html>
